@@ -1,0 +1,70 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./db/data.db"
+}
+
+model Voter {
+  id       Int    @id @default(autoincrement())
+  full_name      String
+  email          String @unique
+  password       String
+  dob            String
+  uvc            String
+  constituency   Constituency @relation(fields: [constituency_id], references: [constituency_id])
+  constituency_id Int
+}
+
+model Candidate {
+  canid          Int    @id @default(autoincrement())
+  name           String
+  constituency   Constituency @relation(fields: [constituency_id], references: [constituency_id])
+  constituency_id Int
+  party          Party @relation(fields: [party_id], references: [party_id])
+  party_id       Int
+  vote_count     Int   @default(0)
+}
+
+model Constituency {
+  constituency_id   Int    @id @default(autoincrement())
+  constituency_name String
+  voters            Voter[]
+  candidates        Candidate[]
+}
+
+model Party {
+  party_id   Int    @id @default(autoincrement())
+  party_name String
+  candidates Candidate[]
+}
+
+model UvcCode {
+  uvc  String @id
+  used Boolean @default(false)
+}
+
+model ElectionCommissionOfficer {
+  id       Int    @id @default(autoincrement())
+  email          String @unique
+  password       String
+}
+
+model ElectionStatus {
+  id       Int    @id @default(autoincrement())
+  status_id Int   @unique
+  status   String
+  start_time DateTime?
+  end_time DateTime?
+}
+
+model Vote {
+  id       Int    @id @default(autoincrement())
+  voter_id Int
+  canid    Int
+  time     DateTime @default(now())
+  constituency_id Int
+  party_id Int
+}

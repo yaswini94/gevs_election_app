@@ -1,0 +1,9 @@
+-- CreateTable
+CREATE TABLE "Vote" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "voter_id" INTEGER NOT NULL,
+    "canid" INTEGER NOT NULL,
+    "time" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "constituency_id" INTEGER NOT NULL,
+    "party_id" INTEGER NOT NULL
+);

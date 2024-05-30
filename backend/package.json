@@ -1,0 +1,26 @@
+{
+  "name": "jwt-auth-fastify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "seed": "npx prisma migrate dev && node prisma/seed.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cookie": "^9.1.0",
+    "@fastify/cors": "^8.5.0",
+    "@fastify/jwt": "^7.2.1",
+    "@prisma/client": "5.3.1",
+    "bcrypt": "^5.1.1",
+    "fastify": "^4.23.2",
+    "fastify-zod": "^1.4.0",
+    "nodemon": "^3.0.2",
+    "prisma": "^5.8.0",
+    "zod": "^3.22.2"
+  }
+}
