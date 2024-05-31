@@ -1,0 +1,153 @@
+:root {
+  font-family: "Open Sans", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+}
+
+html,
+body {
+  font-family: "Open Sans", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.election-wrapper {
+  margin: 12px auto;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.status-card-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 12px 0;
+}
+
+.vote-status-block {
+  border-top: 1px solid #ccc;
+}
+
+.candidates-block {
+  margin-top: 24px;
+}
+
+table {
+  margin: 0 auto;
+}
+
+table {
+  color: #333;
+  background: white;
+  border: 1px solid grey;
+  font-size: 12pt;
+  border-collapse: collapse;
+}
+table thead th,
+table tfoot th {
+  color: #777;
+  background: rgba(0, 0, 0, 0.1);
+}
+table caption {
+  padding: 0.5em;
+}
+table th,
+table td {
+  padding: 0.5em;
+  border: 1px solid lightgrey;
+}
+
+tbody tr:nth-of-type(odd) {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.vote-table {
+  text-align: center;
+  width: 100%;
+}
+
+.error {
+  color: red;
+  margin: 12px 0;
+  text-align: center;
+}
+
+.form-wrapper {
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  padding: 24px;
+  border-radius: 8px;
+  margin: 48px auto 24px;
+}
+
+.last-login {
+  color: #888;
+  font-size: 16px;
+  margin: 16px 0;
+}
+
+.field-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+.field-block input,
+.field-block select {
+  border: 1px solid #ccc;
+  height: 42px;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.form-container {
+  width: 100%;
+}
+
+.form-btn {
+  width: 100%;
+  background: #563d7c;
+  border: 0;
+  border-radius: 8px;
+  height: 40px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.form-btn.small {
+  width: 150px;
+}
+
+.form-btn:hover {
+  cursor: pointer;
+}
+
+.form-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mr-24 {
+  margin-right: 24px;
+}
+
+.form-header {
+  margin: 0;
+  font-size: 24px;
+}
+
+.border-top {
+  border-top: 1px solid #ccc;
+  margin-top: 16px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+}

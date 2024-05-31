@@ -3,7 +3,7 @@
 GEVS Election app implemented as a web application, to provide Shangri-La citizens with a platform to register as voters and cast the votes.
 In addition, GEVS will provide open access to election data and statistics through its Open Data API. The general public, media, and any organisations will be able to access election data using a REST API.
 
-# Requiremnts:
+# Requirements:
 
 There are two types of accounts in GEVS: (1) Voter and (2) Election Commission Officer account.
 
@@ -163,3 +163,49 @@ W44QP7XJ
 
 **********************************************************************************************************************
 
+GEVS Election application is web application
+
+1. For backend API and server we have used Fastify (NodeJS) framework along with SQLite DB with Prisma ORM.
+   JSON Web Tokens for authentication mechanism.
+2. For the frontend we have used ReactJS and custom CSS for UI
+
+-------------------------------------------------------------------------------------------------------------
+
+Steps to run Backend:
+
+1. Go to the GEVS folder path
+2. Run `cd backend` to go inside backend folder
+3. Run `npm i` to install all the dependent libraries
+4. Run `npm run seed` to initialize database
+5. Run `npm start` to run the backend
+6. Backend will be up and running in http:localhost/8000
+
+-------------------------------------------------------------------------------------------------------------
+
+Steps to RESET Database:
+
+1. Go to the GEVS folder path
+2. Run `cd backend` to go inside backend folder
+3. Make sure you stop the running backend server with `ctrl + c`
+4. Run `rm -rf prisma/db/data.db` to delete the Database.
+5. Run `npm run seed` to create new Database file and initialize required tables and data.
+6. Run `npm start` to run the backend
+7. Backend will be up and running in http:localhost/8000
+
+-------------------------------------------------------------------------------------------------------------
+
+Steps to run Frontend:
+
+1. Go to the GEVS folder path
+2. Run `cd frontend` to go inside frontend folder
+3. Run `npm i` to install all the dependent libraries
+4. Run `npm start` to run the frontend.
+5. Open google chrome browser and go to http://localhost:5137
+6. Explore GEVS Election app with separate logins for both voters and Election Officer.
+
+-------------------------------------------------------------------------------------------------------------
+
+DEBUG Steps:
+1. If you notice any issues with either frontend or backend server, please stop the running server.
+2. Delete the `node_modules` folder in the respective folder.
+3. Repeat the steps from above Backend or Frontend sections described above.
